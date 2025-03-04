@@ -1,0 +1,64 @@
+# The name of the application, identifying it within the Flutter ecosystem.
+name: nomnom
+
+# A brief description of the app's purpose and key functionality.
+description: A smart cooking app that uses ingredient-based search to reduce food waste.
+
+# Specifies that the app is not intended for publishing to public repositories like pub.dev.
+publish_to: "none"
+
+# Defines the Dart SDK version constraints for compatibility with this project.
+environment:
+  sdk: ">=2.19.0 <3.0.0"
+
+# Dependencies required for the app's functionality. These include the Flutter SDK and other libraries.
+dependencies:
+  # Core dependency for the Flutter SDK.
+  flutter:
+    sdk: flutter
+
+  # Cupertino-style icons for use in iOS-styled widgets.
+  cupertino_icons: ^1.0.2
+
+  # Networking library for making HTTP requests, such as fetching recipe data from APIs.
+  http: ^0.13.6
+
+  # Dependency for managing state throughout the app using Providers.
+  provider: ^6.0.5
+
+  # A library enabling speech-to-text functionality, used for voice input.
+  speech_to_text: ^7.0.0
+
+  # Library for rendering scalable vector graphics (SVG) files.
+  flutter_svg: ^2.0.7
+
+
+  firebase_auth: ^4.6.1
+  firebase_core: ^2.13.1
+  firebase_database: ^10.1.5
+  cloud_firestore: ^4.9.1
+
+# Development dependencies, used during testing and debugging.
+dev_dependencies:
+  # Core testing framework provided by Flutter for writing unit and widget tests.
+  flutter_test:
+    sdk: flutter
+
+  # Framework for integration testing to validate app workflows end-to-end.
+  integration_test:
+    sdk: flutter
+
+  # Library for creating mock objects, facilitating isolated unit tests.
+  mockito: ^5.3.2
+
+# Flutter-specific settings and configurations.
+flutter:
+  # Enables the use of Material Design components, a design language developed by Google.
+  uses-material-design: true
+
+  # Declares assets used in the app, such as images and other static files.
+  assets:
+    # Background image used on screens, such as the home screen.
+    - assets/images/home_background.jpg
+    # JSON file containing predefined recipes to improve offline functionality.
+    - assets/recipes.json

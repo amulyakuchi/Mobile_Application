@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "17908617560",
+    "firebase_url": "https://nomnom-74a22-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "nomnom-74a22",
+    "storage_bucket": "nomnom-74a22.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:17908617560:android:2a679f2a10c59d479ed52d",
+        "android_client_info": {
+          "package_name": "com.example.nomnom"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFVpfS9gLTgagt9eV3lFcAuY0-zCvAkpo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

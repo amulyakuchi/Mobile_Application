@@ -1,0 +1,29 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        // jcenter() if you still need it, but it's largely deprecated.
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.7.3' // (Your existing AGP version)
+        classpath 'com.google.gms:google-services:4.4.2'  // Google Services plugin
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+// This is optional, depending on your structure:
+rootProject.buildDir = "../build"
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+    project.evaluationDependsOn(":app")
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}

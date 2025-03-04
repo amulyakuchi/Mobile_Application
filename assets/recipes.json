@@ -1,0 +1,626 @@
+[
+  {
+    "id": 1,
+    "title": "Pasta With Tuna",
+    "imageUrl": "https://example.com/pasta-with-tuna.jpg",
+    "readyInMinutes": 20,
+    "ingredients": [
+      "200g pasta",
+      "150g canned tuna",
+      "2 garlic cloves, minced",
+      "1 tbsp olive oil",
+      "1 tbsp lemon juice",
+      "Parsley for garnish",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "Cook pasta according to package instructions. Drain and set aside.",
+      "Heat olive oil in a pan, add minced garlic, and sauté until fragrant.",
+      "Add canned tuna and mix well.",
+      "Stir in cooked pasta, lemon juice, salt, and pepper.",
+      "Garnish with parsley and serve warm."
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Baked Rigatoni",
+    "imageUrl": "https://example.com/baked-rigatoni.jpg",
+    "readyInMinutes": 35,
+    "ingredients": [
+      "300g rigatoni pasta",
+      "200g marinara sauce",
+      "100g mozzarella cheese, shredded",
+      "50g Parmesan cheese, grated",
+      "2 tbsp olive oil",
+      "1 tsp Italian seasoning",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "Preheat the oven to 180°C (350°F).",
+      "Cook rigatoni according to package instructions. Drain and set aside.",
+      "Mix cooked pasta with marinara sauce, olive oil, and Italian seasoning.",
+      "Transfer the pasta mixture to a baking dish. Sprinkle mozzarella and Parmesan cheese on top.",
+      "Bake in the preheated oven for 20 minutes or until cheese is bubbly and golden.",
+      "Serve hot."
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Colorful Tomato and Spinach Seafood Pasta",
+    "imageUrl": "https://example.com/colorful-tomato-seafood-pasta.jpg",
+    "readyInMinutes": 25,
+    "ingredients": [
+      "200g spaghetti",
+      "100g shrimp, cleaned",
+      "1 cup cherry tomatoes, halved",
+      "1 cup spinach leaves",
+      "2 garlic cloves, minced",
+      "2 tbsp olive oil",
+      "1 tsp chili flakes",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "Cook spaghetti according to package instructions. Drain and set aside.",
+      "Heat olive oil in a pan, add minced garlic and chili flakes, and sauté for 1 minute.",
+      "Add shrimp and cook until pink.",
+      "Stir in cherry tomatoes and spinach. Cook until spinach wilts.",
+      "Add cooked spaghetti, salt, and pepper. Toss to combine.",
+      "Serve warm."
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Rustic Red Wine Spaghetti",
+    "imageUrl": "https://example.com/red-wine-spaghetti.jpg",
+    "readyInMinutes": 30,
+    "ingredients": [
+      "200g spaghetti",
+      "1 cup red wine",
+      "2 garlic cloves, minced",
+      "1 tbsp olive oil",
+      "1/2 tsp crushed red pepper flakes",
+      "Salt and pepper to taste",
+      "Parmesan cheese for garnish"
+    ],
+    "instructions": [
+      "Cook spaghetti in salted boiling water for 5 minutes (half-cooked). Drain and set aside.",
+      "Heat olive oil in a pan, add garlic and red pepper flakes, and sauté until fragrant.",
+      "Add red wine to the pan and bring to a simmer.",
+      "Add the half-cooked spaghetti and continue cooking until the wine is absorbed and pasta is al dente.",
+      "Season with salt and pepper.",
+      "Garnish with Parmesan cheese and serve warm."
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Almost Guilt Free Mac and Cheese",
+    "imageUrl": "https://example.com/almost-guilt-free-mac-and-cheese.jpg",
+    "readyInMinutes": 30,
+    "ingredients": [
+      "200g elbow macaroni",
+      "1 cup low-fat cheddar cheese, shredded",
+      "1 cup skim milk",
+      "2 tbsp whole wheat flour",
+      "1 tbsp olive oil",
+      "1/2 tsp mustard powder",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "Cook macaroni according to package instructions. Drain and set aside.",
+      "In a saucepan, heat olive oil and stir in the whole wheat flour. Cook for 1 minute.",
+      "Gradually whisk in skim milk and mustard powder. Cook until the sauce thickens.",
+      "Remove from heat and stir in shredded cheddar cheese until melted.",
+      "Mix the cheese sauce with the cooked macaroni.",
+      "Serve warm and enjoy."
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Chicken Noodle Casserole Dish",
+    "imageUrl": "https://example.com/chicken-noodle-casserole.jpg",
+    "readyInMinutes": 40,
+    "ingredients": [
+      "300g egg noodles",
+      "2 cups cooked chicken, shredded",
+      "1 can cream of mushroom soup",
+      "1 cup milk",
+      "1 cup frozen peas and carrots",
+      "1/2 cup breadcrumbs",
+      "1/2 cup shredded cheese",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "Preheat the oven to 180°C (350°F).",
+      "Cook egg noodles according to package instructions. Drain and set aside.",
+      "In a bowl, mix cream of mushroom soup, milk, frozen vegetables, salt, and pepper.",
+      "Combine the cooked noodles, shredded chicken, and soup mixture. Transfer to a casserole dish.",
+      "Sprinkle breadcrumbs and shredded cheese on top.",
+      "Bake for 25 minutes or until the top is golden and bubbly.",
+      "Serve hot."
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Chicken and Miso Ramen Noodle Soup",
+    "imageUrl": "https://example.com/chicken-miso-ramen.jpg",
+    "readyInMinutes": 25,
+    "ingredients": [
+      "200g ramen noodles",
+      "200g chicken breast, sliced",
+      "4 cups chicken broth",
+      "2 tbsp miso paste",
+      "1 tbsp soy sauce",
+      "1 boiled egg, halved",
+      "1 cup bok choy",
+      "1/2 cup sliced mushrooms",
+      "Green onions and sesame seeds for garnish"
+    ],
+    "instructions": [
+      "Cook ramen noodles according to package instructions. Drain and set aside.",
+      "In a pot, bring chicken broth to a boil. Stir in miso paste and soy sauce.",
+      "Add chicken slices and cook for 5 minutes or until tender.",
+      "Add bok choy and mushrooms to the broth and simmer for 3 minutes.",
+      "Divide the cooked noodles into bowls. Pour the hot broth over the noodles.",
+      "Top with boiled egg halves, green onions, and sesame seeds.",
+      "Serve immediately."
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Chicken Parmesan With Pasta",
+    "imageUrl": "https://example.com/chicken-parmesan.jpg",
+    "readyInMinutes": 35,
+    "ingredients": [
+      "200g spaghetti",
+      "2 chicken breasts",
+      "1 cup marinara sauce",
+      "1/2 cup breadcrumbs",
+      "1/2 cup Parmesan cheese, grated",
+      "1/2 cup mozzarella cheese, shredded",
+      "2 tbsp olive oil",
+      "1 egg, beaten",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "Preheat the oven to 190°C (375°F).",
+      "Cook spaghetti according to package instructions. Drain and set aside.",
+      "Season chicken breasts with salt and pepper. Coat in beaten egg, then breadcrumbs mixed with Parmesan cheese.",
+      "Heat olive oil in a pan and fry the chicken until golden brown on both sides.",
+      "Place fried chicken in a baking dish. Top with marinara sauce and mozzarella cheese.",
+      "Bake for 15 minutes or until the cheese is melted and bubbly.",
+      "Serve chicken over cooked spaghetti."
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Homestyle Chicken Noodle Casserole",
+    "imageUrl": "https://example.com/homestyle-chicken-noodle-casserole.jpg",
+    "readyInMinutes": 45,
+    "ingredients": [
+      "300g egg noodles",
+      "2 cups cooked chicken, cubed",
+      "1 can cream of chicken soup",
+      "1 cup chicken broth",
+      "1 cup mixed vegetables",
+      "1 cup shredded cheddar cheese",
+      "1/2 cup crushed crackers",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "Preheat the oven to 180°C (350°F).",
+      "Cook egg noodles according to package instructions. Drain and set aside.",
+      "In a bowl, mix cream of chicken soup, chicken broth, mixed vegetables, salt, and pepper.",
+      "Combine the cooked noodles, cubed chicken, and soup mixture. Transfer to a casserole dish.",
+      "Top with shredded cheddar cheese and crushed crackers.",
+      "Bake for 30 minutes or until the top is golden and bubbly.",
+      "Serve hot and enjoy."
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Stir Fried Quinoa, Brown Rice and Chicken Breast",
+    "imageUrl": "https://example.com/stir-fried-quinoa-chicken.jpg",
+    "readyInMinutes": 30,
+    "ingredients": [
+      "1/2 cup cooked quinoa",
+      "1/2 cup cooked brown rice",
+      "200g chicken breast, sliced",
+      "1 cup mixed vegetables (carrots, peas, and bell peppers)",
+      "2 tbsp soy sauce",
+      "1 tbsp sesame oil",
+      "1 clove garlic, minced",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "Heat sesame oil in a large pan or wok over medium heat.",
+      "Add minced garlic and sauté for 30 seconds until fragrant.",
+      "Add chicken slices and cook until no longer pink, about 5 minutes.",
+      "Stir in mixed vegetables and cook for another 3 minutes.",
+      "Add cooked quinoa and brown rice to the pan, mixing well.",
+      "Drizzle soy sauce over the mixture and stir to combine.",
+      "Cook for an additional 2 minutes and season with salt and pepper.",
+      "Serve warm."
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Mexican Chicken & Rice Bowl",
+    "imageUrl": "https://example.com/mexican-chicken-rice-bowl.jpg",
+    "readyInMinutes": 35,
+    "ingredients": [
+      "300g chicken breast, diced",
+      "1 cup cooked rice",
+      "1 cup black beans",
+      "1/2 cup corn kernels",
+      "1/4 cup salsa",
+      "1 tbsp taco seasoning",
+      "1 tbsp olive oil",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "Heat olive oil in a large pan over medium heat.",
+      "Add diced chicken breast and cook until golden and fully cooked, about 8 minutes.",
+      "Stir in taco seasoning and mix well to coat the chicken.",
+      "Add black beans, corn, and salsa to the pan and cook for 5 minutes.",
+      "Serve the chicken mixture over cooked rice.",
+      "Optional: Garnish with cilantro or a dollop of sour cream before serving."
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Chinese Chicken Salad With Chipotle Dressing",
+    "imageUrl": "https://example.com/chinese-chicken-salad.jpg",
+    "readyInMinutes": 25,
+    "ingredients": [
+      "2 cups shredded lettuce",
+      "1 cup cooked chicken breast, shredded",
+      "1/2 cup shredded carrots",
+      "1/4 cup sliced almonds",
+      "1/4 cup crispy wonton strips",
+      "2 tbsp sesame seeds",
+      "For the dressing:",
+      "2 tbsp mayonnaise",
+      "1 tbsp chipotle sauce",
+      "1 tsp honey",
+      "1 tbsp rice vinegar",
+      "Salt to taste"
+    ],
+    "instructions": [
+      "In a large bowl, combine lettuce, shredded chicken, carrots, almonds, and sesame seeds.",
+      "In a small bowl, whisk together mayonnaise, chipotle sauce, honey, rice vinegar, and a pinch of salt until smooth.",
+      "Pour the dressing over the salad and toss well to coat.",
+      "Top with crispy wonton strips before serving.",
+      "Serve chilled or at room temperature."
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Blast Of Color Mexican Stuffed Bell Peppers",
+    "imageUrl": "https://example.com/stuffed-bell-peppers.jpg",
+    "readyInMinutes": 40,
+    "ingredients": [
+      "4 large bell peppers (any color), halved and deseeded",
+      "1 cup cooked rice",
+      "1/2 cup black beans",
+      "1/2 cup corn kernels",
+      "200g ground chicken or turkey",
+      "1 tbsp taco seasoning",
+      "1 cup shredded cheese",
+      "1 tbsp olive oil",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "Preheat the oven to 375°F (190°C).",
+      "Heat olive oil in a pan and cook ground chicken or turkey until browned.",
+      "Stir in taco seasoning, black beans, corn, and cooked rice. Cook for 3 minutes.",
+      "Place the bell pepper halves in a baking dish and fill them with the mixture.",
+      "Top each stuffed pepper with shredded cheese.",
+      "Bake in the preheated oven for 20-25 minutes, until the peppers are tender and the cheese is melted.",
+      "Serve warm, garnished with fresh cilantro if desired."
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Cranberry Pecan Greek Yogurt Chicken Salad",
+    "imageUrl": "https://example.com/cranberry-chicken-salad.jpg",
+    "readyInMinutes": 20,
+    "ingredients": [
+      "2 cups cooked chicken breast, shredded",
+      "1/4 cup dried cranberries",
+      "1/4 cup chopped pecans",
+      "1/2 cup Greek yogurt",
+      "1 tbsp honey",
+      "1 tbsp lemon juice",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "In a large bowl, combine shredded chicken, cranberries, and pecans.",
+      "In a separate bowl, mix Greek yogurt, honey, lemon juice, salt, and pepper to make the dressing.",
+      "Pour the dressing over the chicken mixture and toss until evenly coated.",
+      "Serve chilled, on its own or in a sandwich or wrap."
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Grilled Chicken Gyros With Tzatziki",
+    "imageUrl": "https://example.com/grilled-chicken-gyros.jpg",
+    "readyInMinutes": 30,
+    "ingredients": [
+      "2 chicken breasts, sliced",
+      "4 pita breads",
+      "1 cup chopped lettuce",
+      "1 tomato, diced",
+      "1 cucumber, diced",
+      "1/2 cup tzatziki sauce",
+      "1 tbsp olive oil",
+      "1 tsp dried oregano",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "Marinate chicken slices with olive oil, oregano, salt, and pepper for 10 minutes.",
+      "Grill the chicken on medium heat until fully cooked, about 8-10 minutes.",
+      "Warm the pita breads on the grill or in a pan.",
+      "Assemble the gyros by adding lettuce, tomato, cucumber, grilled chicken, and a generous dollop of tzatziki sauce to each pita.",
+      "Roll up and serve warm."
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Garbanzo Beans & Greens",
+    "imageUrl": "https://example.com/garbanzo-beans-greens.jpg",
+    "readyInMinutes": 15,
+    "ingredients": [
+      "1 can (400g) garbanzo beans, drained and rinsed",
+      "2 cups spinach or kale, chopped",
+      "2 garlic cloves, minced",
+      "1 tbsp olive oil",
+      "1 tsp smoked paprika",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "Heat olive oil in a pan over medium heat.",
+      "Add minced garlic and sauté for 1 minute until fragrant.",
+      "Add garbanzo beans and smoked paprika, cooking for 3-4 minutes.",
+      "Stir in chopped greens and cook until wilted, about 2 minutes.",
+      "Season with salt and pepper to taste and serve warm."
+    ]
+  },
+  {
+    "id": 17,
+    "title": "Sprouted Grain Chicken Pesto Sandwich",
+    "imageUrl": "https://example.com/sprouted-grain-chicken-pesto.jpg",
+    "readyInMinutes": 10,
+    "ingredients": [
+      "2 slices sprouted grain bread",
+      "1 grilled chicken breast, sliced",
+      "2 tbsp pesto sauce",
+      "1 slice provolone cheese",
+      "1/4 cup spinach leaves"
+    ],
+    "instructions": [
+      "Spread pesto sauce on one side of each slice of bread.",
+      "Layer grilled chicken, provolone cheese, and spinach leaves on one slice.",
+      "Top with the other slice of bread to form a sandwich.",
+      "Toast the sandwich in a pan or sandwich press until the bread is golden and the cheese is melted.",
+      "Serve warm."
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Chicken Tikka Masala Indian",
+    "imageUrl": "https://example.com/chicken-tikka-masala.jpg",
+    "readyInMinutes": 40,
+    "ingredients": [
+      "500g chicken breast, cubed",
+      "1 cup plain yogurt",
+      "2 tbsp tikka masala paste",
+      "1 onion, chopped",
+      "2 garlic cloves, minced",
+      "1 cup tomato puree",
+      "1/2 cup heavy cream",
+      "1 tbsp butter",
+      "Salt to taste"
+    ],
+    "instructions": [
+      "Marinate chicken cubes in yogurt and tikka masala paste for at least 20 minutes.",
+      "Heat butter in a pan and sauté onion and garlic until golden.",
+      "Add marinated chicken and cook until lightly browned.",
+      "Stir in tomato puree and simmer for 15 minutes.",
+      "Add heavy cream and simmer for another 5 minutes.",
+      "Serve with steamed rice or naan bread."
+    ]
+  },
+  {
+    "id": 19,
+    "title": "BahnMi Meatball Sub",
+    "imageUrl": "https://example.com/bahnmi-meatball-sub.jpg",
+    "readyInMinutes": 25,
+    "ingredients": [
+      "500g ground pork or chicken",
+      "1 tbsp soy sauce",
+      "1 tbsp fish sauce",
+      "1 tbsp sesame oil",
+      "1 tsp grated ginger",
+      "1 baguette, sliced into 4 portions",
+      "1 cup pickled carrots and radishes",
+      "1/2 cup sliced cucumber",
+      "1/4 cup fresh cilantro"
+    ],
+    "instructions": [
+      "In a bowl, mix ground meat, soy sauce, fish sauce, sesame oil, and ginger. Form into small meatballs.",
+      "Cook the meatballs in a pan over medium heat until browned and fully cooked.",
+      "Toast the baguette portions until lightly crispy.",
+      "Fill each baguette with meatballs, pickled carrots and radishes, cucumber slices, and fresh cilantro.",
+      "Serve immediately with a side of spicy chili sauce if desired."
+    ]
+  },
+  {
+    "id": 20,
+    "title": "Strawberry-Mango Quinoa Salad",
+    "imageUrl": "https://example.com/strawberry-mango-quinoa.jpg",
+    "readyInMinutes": 15,
+    "ingredients": [
+      "1 cup cooked quinoa",
+      "1/2 cup diced strawberries",
+      "1/2 cup diced mango",
+      "1/4 cup crumbled feta cheese",
+      "2 tbsp chopped mint leaves",
+      "2 tbsp olive oil",
+      "1 tbsp lemon juice",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "In a large bowl, combine cooked quinoa, strawberries, and mango.",
+      "Add crumbled feta and chopped mint leaves.",
+      "Drizzle with olive oil and lemon juice.",
+      "Toss gently to combine and season with salt and pepper to taste.",
+      "Serve chilled or at room temperature."
+    ]
+  },
+  {
+    "id": 21,
+    "title": "Spicy Salad with Kidney Beans, Cheddar, and Nuts",
+    "imageUrl": "https://example.com/spicy-kidney-bean-salad.jpg",
+    "readyInMinutes": 20,
+    "ingredients": [
+      "1 can (400g) kidney beans, drained and rinsed",
+      "1/2 cup grated cheddar cheese",
+      "1/4 cup chopped walnuts or almonds",
+      "1/2 cup chopped bell peppers",
+      "1/4 cup diced red onion",
+      "2 tbsp olive oil",
+      "1 tbsp hot sauce",
+      "1 tsp smoked paprika",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "In a large mixing bowl, combine kidney beans, bell peppers, and red onion.",
+      "Add grated cheddar cheese and chopped nuts.",
+      "Drizzle with olive oil and hot sauce.",
+      "Sprinkle with smoked paprika, salt, and pepper.",
+      "Toss well to coat and serve immediately."
+    ]
+  },
+  {
+    "id": 22,
+    "title": "Spinach Salad with Strawberry Vinaigrette",
+    "imageUrl": "https://example.com/spinach-strawberry-vinaigrette.jpg",
+    "readyInMinutes": 10,
+    "ingredients": [
+      "4 cups baby spinach leaves",
+      "1/2 cup sliced strawberries",
+      "1/4 cup sliced almonds, toasted",
+      "1/4 cup crumbled goat cheese",
+      "2 tbsp balsamic vinegar",
+      "2 tbsp olive oil",
+      "1 tbsp honey",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "In a small bowl, whisk together balsamic vinegar, olive oil, honey, salt, and pepper to make the vinaigrette.",
+      "In a large salad bowl, combine spinach, sliced strawberries, and toasted almonds.",
+      "Drizzle the vinaigrette over the salad and toss gently to combine.",
+      "Top with crumbled goat cheese and serve immediately."
+    ]
+  },
+  {
+    "id": 23,
+    "title": "Masala-Tofu Burger",
+    "imageUrl": "https://example.com/masala-tofu-burger.jpg",
+    "readyInMinutes": 30,
+    "ingredients": [
+      "200g tofu, crumbled",
+      "1/2 cup breadcrumbs",
+      "1/4 cup finely chopped onions",
+      "1 tbsp garam masala",
+      "1 tbsp chopped cilantro",
+      "1/2 tsp turmeric powder",
+      "Salt to taste",
+      "2 tbsp vegetable oil",
+      "4 burger buns",
+      "Lettuce leaves and sliced tomatoes for serving"
+    ],
+    "instructions": [
+      "In a bowl, mix crumbled tofu, breadcrumbs, onions, garam masala, turmeric powder, cilantro, and salt.",
+      "Shape the mixture into burger patties.",
+      "Heat oil in a pan and cook the patties until golden brown on both sides.",
+      "Toast the burger buns lightly in the same pan.",
+      "Assemble the burgers with lettuce, sliced tomatoes, and the masala-tofu patties.",
+      "Serve hot with ketchup or chutney."
+    ]
+  },
+  {
+    "id": 24,
+    "title": "Bouillabaisse: A Delicious Fisherman's Stew Originating in France",
+    "imageUrl": "https://example.com/bouillabaisse.jpg",
+    "readyInMinutes": 50,
+    "ingredients": [
+      "500g assorted seafood (fish, shrimp, mussels)",
+      "1 onion, chopped",
+      "2 garlic cloves, minced",
+      "2 tomatoes, diced",
+      "1/2 cup white wine",
+      "1 liter fish stock",
+      "1 tsp saffron threads",
+      "1 tsp paprika",
+      "2 tbsp olive oil",
+      "Salt and pepper to taste",
+      "Fresh parsley for garnish"
+    ],
+    "instructions": [
+      "Heat olive oil in a large pot and sauté onions and garlic until softened.",
+      "Add diced tomatoes and cook until they break down into a sauce.",
+      "Pour in white wine and let it simmer for 5 minutes.",
+      "Add fish stock, saffron, paprika, salt, and pepper. Bring to a boil.",
+      "Add seafood to the pot and simmer for 15-20 minutes until cooked through.",
+      "Garnish with fresh parsley and serve hot with crusty bread."
+    ]
+  },
+  {
+    "id": 25,
+    "title": "Golden Potato and Caramelized Onion Flat Bread Pizza",
+    "imageUrl": "https://example.com/potato-onion-pizza.jpg",
+    "readyInMinutes": 35,
+    "ingredients": [
+      "1 flatbread or pizza base",
+      "2 medium potatoes, thinly sliced",
+      "1 large onion, caramelized",
+      "1 cup shredded mozzarella cheese",
+      "1 tbsp olive oil",
+      "1 tsp dried thyme",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "Preheat oven to 200°C (400°F).",
+      "Spread olive oil over the flatbread.",
+      "Layer thinly sliced potatoes over the base and season with salt, pepper, and thyme.",
+      "Top with caramelized onions and shredded mozzarella cheese.",
+      "Bake in the preheated oven for 15-20 minutes until the cheese is melted and bubbly.",
+      "Slice and serve hot."
+    ]
+  },
+  {
+    "id": 26,
+    "title": "Potato and Scallion Bread Rolls",
+    "imageUrl": "https://example.com/potato-scallion-rolls.jpg",
+    "readyInMinutes": 45,
+    "ingredients": [
+      "2 cups mashed potatoes",
+      "1/2 cup chopped scallions",
+      "1 cup all-purpose flour",
+      "1/2 tsp baking powder",
+      "1/4 cup butter, melted",
+      "1 egg",
+      "Salt to taste",
+      "1/2 tsp garlic powder"
+    ],
+    "instructions": [
+      "Preheat oven to 180°C (350°F).",
+      "In a mixing bowl, combine mashed potatoes, chopped scallions, flour, baking powder, salt, and garlic powder.",
+      "Add melted butter and egg, mixing to form a soft dough.",
+      "Shape the dough into small rolls and place on a baking sheet.",
+      "Bake for 20-25 minutes until golden brown.",
+      "Serve warm with butter or a dipping sauce."
+    ]
+  }
+]
