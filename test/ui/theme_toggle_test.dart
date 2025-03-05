@@ -9,11 +9,10 @@ void main() {
     late SettingsViewModel settingsVM;
 
     setUp(() {
-      settingsVM = SettingsViewModel(); // Initialize SettingsViewModel before each test
+      settingsVM = SettingsViewModel();
     });
 
     testWidgets('Verify theme toggle UI interaction', (WidgetTester tester) async {
-      // Wrap SettingsScreen with a Provider for SettingsViewModel
       await tester.pumpWidget(
         MaterialApp(
           home: ChangeNotifierProvider<SettingsViewModel>.value(
@@ -23,9 +22,9 @@ void main() {
         ),
       );
 
-      // Verify initial state (Switch is OFF for light theme)
+      
       expect(find.text('Dark Theme'), findsOneWidget, reason: 'Dark Theme toggle should be visible.');
-      final switchFinder = find.byType(Switch); // Locate the Switch widget
+      final switchFinder = find.byType(Switch);
       expect(switchFinder, findsOneWidget, reason: 'Switch widget should be present.');
       expect(
         tester.widget<Switch>(switchFinder).value,
@@ -33,22 +32,22 @@ void main() {
         reason: 'Switch should be OFF by default (Light theme).',
       );
 
-      // Toggle the switch to enable dark theme
-      await tester.tap(switchFinder); // Simulate user tapping the switch
-      await tester.pumpAndSettle(); // Wait for UI update
+      
+      await tester.tap(switchFinder);
+      await tester.pumpAndSettle();
 
-      // Verify the switch is now ON (Dark theme)
+      
       expect(
         tester.widget<Switch>(switchFinder).value,
         true,
         reason: 'Switch should be ON after toggling (Dark theme).',
       );
 
-      // Toggle the switch back to disable dark theme
-      await tester.tap(switchFinder); // Simulate user toggling back
-      await tester.pumpAndSettle(); // Wait for UI update
+    
+      await tester.tap(switchFinder);
+      await tester.pumpAndSettle();
 
-      // Verify the switch is back OFF (Light theme)
+      
       expect(
         tester.widget<Switch>(switchFinder).value,
         false,
@@ -57,3 +56,4 @@ void main() {
     });
   });
 }
+
