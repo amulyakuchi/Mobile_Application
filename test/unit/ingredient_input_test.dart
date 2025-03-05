@@ -10,7 +10,6 @@ void main() {
     });
 
     test('Valid ingredient should be accepted', () async {
-      // Replace with actual validation logic for your service
       final validIngredient = 'Chicken';
       final isValid = await apiService.validateIngredient(validIngredient);
 
@@ -18,7 +17,6 @@ void main() {
     });
 
     test('Invalid ingredient should be rejected', () async {
-      // Replace with actual validation logic for your service
       final invalidIngredient = 'kjbeyfb';
       final isValid = await apiService.validateIngredient(invalidIngredient);
 
