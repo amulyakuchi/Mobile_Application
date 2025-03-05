@@ -75,28 +75,31 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              subtitle: personalNote.isNotEmpty? Text('Note: $personalNote',
-              style:TextStyle(fontSize:14*settingsVM.fontScale,
-              fontStyle:FontStyle.italic,),):null,
-
+              subtitle: personalNote.isNotEmpty
+                  ? Text(
+                'Note: $personalNote',
+                style:TextStyle(
+                  fontSize:14*settingsVM.fontScale,
+                  fontStyle: FontStyle.italic,
+                ),
+              )
+                  :null,
               trailing: Row(
                 mainAxisSize: MainAxisSize.min,
-                children:[
+                children: [
                   IconButton(icon:const Icon(Icons.edit_note),
                   tooltip:'Add/Edit Note',
-                  onPressed:()=>_showAddNotDialog(context,recipe),),
-                
-              
-              
-              IconButton(
-                icon: const Icon(Icons.delete, color: Colors.red),
-                onPressed: () async {
-                  await favVM.removeFavorite(recipe);
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('Removed from favorites')),
-                  );
-                },
-              ),
+                  onPressed: () => _showAddNoteDialog(context, recipe),
+                ),
+                IconButton(
+                  icon: const Icon(Icons.delete, color: Colors.red),
+                  onPressed: () async {
+                    await favVM.removeFavorite(recipe);
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text('Removed from favorites')),
+                    );
+                  },
+                ),
               ],
             ),
               onTap: () {
@@ -148,5 +151,4 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
       },
     );
   }
-
 }
