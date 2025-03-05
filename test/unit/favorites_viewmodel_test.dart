@@ -16,9 +16,9 @@ void main() {
         ingredients: ['Chicken', 'Rice'],
         instructions: ['Cook chicken', 'Add rice'],
         readyInMinutes: 35,
-        isVegan: false, // Added required argument
-        isGlutenFree: false, // Added required argument
-        dietaryPreferences: ['High-Protein'], // Added required argument
+        isVegan: false,
+        isGlutenFree: false,
+        dietaryPreferences: ['High-Protein'],
       );
     });
 
