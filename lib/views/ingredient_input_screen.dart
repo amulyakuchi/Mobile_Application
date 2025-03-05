@@ -3,8 +3,7 @@ import 'package:provider/provider.dart';
 import '../viewmodels/search_viewmodel.dart';
 import '../services/spoonacular_api_service.dart';
 
-/// Screen to input ingredients and apply filters for recipe search.
-/// Includes dietary preferences, cuisine types, and dish types as filters.
+
 class IngredientInputScreen extends StatefulWidget {
   const IngredientInputScreen({Key? key}) : super(key: key);
 
@@ -15,16 +14,16 @@ class IngredientInputScreen extends StatefulWidget {
 class _IngredientInputScreenState extends State<IngredientInputScreen> {
   final TextEditingController _ingredientController = TextEditingController();
   final List<String> _ingredients = []; // List to hold entered ingredients
-  final SpoonacularApiService _apiService = SpoonacularApiService(); // API service for validation
+  final SpoonacularApiService _apiService = SpoonacularApiService();
 
-  // Filters with default values
+  
   String selectedDietaryPreference = 'Any';
   String selectedCuisine = 'Any';
   String selectedDishType = 'Any';
-  double maxCookingTime = 60; // Default maximum cooking time (in minutes)
-  int numberOfResults = 10; // Default number of results to fetch
+  double maxCookingTime = 60;
+  int numberOfResults = 10;
 
-  // Predefined filter options
+  
   final List<String> dietaryOptions = [
     'Any',
     'Vegan',
@@ -55,24 +54,23 @@ class _IngredientInputScreenState extends State<IngredientInputScreen> {
     'Snack',
   ];
 
-  /// Adds an ingredient to the list after validating it via the API.
+  
   Future<void> _addIngredient() async {
-    final ingredient = _ingredientController.text.trim(); // Remove extra spaces
+    final ingredient = _ingredientController.text.trim();
     if (ingredient.isEmpty) return;
 
-    // Validate the ingredient name using Spoonacular API
+    
     final isValid = await _apiService.validateIngredient(ingredient);
 
     if (isValid) {
-      // Add only if it's not already in the list
+      
       if (!_ingredients.contains(ingredient)) {
         setState(() {
           _ingredients.add(ingredient);
-          _ingredientController.clear(); // Clear input field after adding
+          _ingredientController.clear();
         });
       }
     } else {
-      // Show a snack bar if the ingredient is invalid
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
           content: Text('Invalid ingredient. Please enter a valid food item.'),
@@ -82,12 +80,10 @@ class _IngredientInputScreenState extends State<IngredientInputScreen> {
     }
   }
 
-  /// Removes an ingredient from the list.
   void _removeIngredient(String ingredient) {
     setState(() => _ingredients.remove(ingredient));
   }
 
-  /// Builds the chips to display the list of entered ingredients.
   Widget _buildIngredientChips() {
     if (_ingredients.isEmpty) {
       return const Text(
@@ -96,19 +92,18 @@ class _IngredientInputScreenState extends State<IngredientInputScreen> {
       );
     }
     return Wrap(
-      spacing: 8.0, // Horizontal spacing between chips
-      runSpacing: 4.0, // Vertical spacing between chips
+      spacing: 8.0,
+      runSpacing: 4.0,
       children: _ingredients.map((ingredient) {
         return Chip(
           label: Text(ingredient),
           deleteIcon: const Icon(Icons.close),
-          onDeleted: () => _removeIngredient(ingredient), // Remove chip on delete
+          onDeleted: () => _removeIngredient(ingredient),
         );
       }).toList(),
     );
   }
 
-  /// Builds a dropdown filter with the provided options.
   Widget _buildDropdownFilter({
     required String label,
     required List<String> options,
@@ -118,7 +113,7 @@ class _IngredientInputScreenState extends State<IngredientInputScreen> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(label, style: const TextStyle(fontSize: 16)), // Label for the filter
+        Text(label, style: const TextStyle(fontSize: 16)),
         DropdownButton<String>(
           value: selectedValue,
           items: options.map((option) {
@@ -127,7 +122,7 @@ class _IngredientInputScreenState extends State<IngredientInputScreen> {
               child: Text(option),
             );
           }).toList(),
-          onChanged: onChanged, // Update selected value
+          onChanged: onChanged,
         ),
       ],
     );
@@ -155,7 +150,6 @@ class _IngredientInputScreenState extends State<IngredientInputScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Input field for ingredients
             TextField(
               controller: _ingredientController,
               decoration: InputDecoration(
@@ -168,14 +162,13 @@ class _IngredientInputScreenState extends State<IngredientInputScreen> {
                   onPressed: _addIngredient,
                 ),
               ),
-              onSubmitted: (_) => _addIngredient(), // Add ingredient on pressing Enter
+              onSubmitted: (_) => _addIngredient(),
             ),
             const SizedBox(height: 16),
-            // Display ingredient chips
             _buildIngredientChips(),
             const SizedBox(height: 16),
 
-            // Filters for dietary preference, cuisine, and dish type
+            
             _buildDropdownFilter(
               label: 'Dietary Preference',
               options: dietaryOptions,
@@ -204,7 +197,7 @@ class _IngredientInputScreenState extends State<IngredientInputScreen> {
             ),
             const SizedBox(height: 12),
 
-            // Slider for maximum cooking time
+            
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -224,7 +217,6 @@ class _IngredientInputScreenState extends State<IngredientInputScreen> {
             ),
             const SizedBox(height: 12),
 
-            // Slider for the number of results
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -244,32 +236,24 @@ class _IngredientInputScreenState extends State<IngredientInputScreen> {
             ),
             const SizedBox(height: 12),
 
-            // Search Recipes Button
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: isDarkMode ? Colors.teal.shade800 : Colors.green.shade700,
                 minimumSize: const Size(double.infinity, 50),
               ),
               onPressed: _ingredients.isEmpty
-                  ? null // Disable button if no ingredients are added
+                  ? null
                   : () async {
                 await searchVM.searchRecipes(
-                  ingredients: _ingredients.join(','), // Join ingredients with commas
+                  ingredients: _ingredients.join(','),
                   dietaryPreference: selectedDietaryPreference,
                   numberOfResults: numberOfResults,
                   cuisine: selectedCuisine,
                   dishType: selectedDishType,
                 );
-                Navigator.pushNamed(context, '/recipe_list'); // Navigate to the recipe list
+                Navigator.pushNamed(context, '/recipe_list');
               },
-              child: Text(
-                'Search Recipes',
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
+              child: const Text('Search Recipes', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white)),
             ),
           ],
         ),
