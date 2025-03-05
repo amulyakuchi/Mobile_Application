@@ -17,7 +17,6 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
   void initState() {
     super.initState();
 
-    // Fetch the list of favorite recipes when the screen is initialized
     final favVM = Provider.of<FavoritesViewModel>(context, listen: false);
     favVM.fetchFavorites();
   }
