@@ -5,7 +5,6 @@ import '../viewmodels/recipe_detail_viewmodel.dart';
 import '../models/recipe.dart';
 import '../viewmodels/settings_viewmodel.dart';
 
-/// Displays the list of favorite recipes added by the user.
 class FavoritesScreen extends StatefulWidget {
   const FavoritesScreen({Key? key}) : super(key: key);
 
