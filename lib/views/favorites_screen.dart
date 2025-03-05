@@ -119,7 +119,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
   void _showAddNoteDialog(BuildContext context, Recipe recipe) {
     final favVM = Provider.of<FavoritesViewModel>(context, listen: false);
 
-    // Pre-fill with existing note if any
+    
     final existingNote = favVM.getNoteForRecipe(recipe);
     final noteController = TextEditingController(text: existingNote);
 
