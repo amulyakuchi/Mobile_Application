@@ -4,7 +4,7 @@ import '../viewmodels/search_viewmodel.dart';
 import '../viewmodels/settings_viewmodel.dart';
 import '../viewmodels/favorites_viewmodel.dart';
 
-/// A screen that displays the list of recipes fetched from the search query.
+
 class RecipeListScreen extends StatelessWidget {
   const RecipeListScreen({Key? key}) : super(key: key);
 
