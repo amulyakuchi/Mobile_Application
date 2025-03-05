@@ -12,6 +12,7 @@ class FavoritesScreen extends StatefulWidget {
   State<FavoritesScreen> createState() => _FavoritesScreenState();
 }
 
+
 class _FavoritesScreenState extends State<FavoritesScreen> {
   @override
   void initState() {
