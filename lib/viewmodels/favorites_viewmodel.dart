@@ -1,6 +1,4 @@
-
 import 'package:flutter/foundation.dart';
-
 import '../models/recipe.dart';
 
 
@@ -35,6 +33,8 @@ class FavoritesViewModel extends ChangeNotifier {
 
   Future<void> removeFavorite(Recipe recipe) async {
     favorites.removeWhere((r) => r.id == recipe.id);
+    recipeNotes.remove(recipe.id);
+
     notifyListeners();
   }
 
