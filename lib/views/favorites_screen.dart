@@ -12,7 +12,6 @@ class FavoritesScreen extends StatefulWidget {
   State<FavoritesScreen> createState() => _FavoritesScreenState();
 }
 
-
 class _FavoritesScreenState extends State<FavoritesScreen> {
   @override
   void initState() {
@@ -57,6 +56,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
         itemCount: favVM.favorites.length,
         itemBuilder: (context, index) {
           final Recipe recipe = favVM.favorites[index];
+          final personalNote= favVM.getNoteForRecipe(recipe);
           return Card(
             color: isDarkMode ? Colors.grey.shade800 : Colors.white,
             margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
@@ -75,7 +75,20 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              trailing: IconButton(
+              subtitle: personalNote.isNotEmpty? Text('Note: $personalNote',
+              style:TextStyle(fontSize:14*settingsVM.fontScale,
+              fontStyle:FontStyle.italic,),):null,
+
+              trailing: Row(
+                mainAxisSize: MainAxisSize.min,
+                children:[
+                  IconButton(icon:const Icon(Icons.edit_note),
+                  tooltip:'Add/Edit Note',
+                  onPressed:()=>_showAddNotDialog(context,recipe),),
+                
+              
+              
+              IconButton(
                 icon: const Icon(Icons.delete, color: Colors.red),
                 onPressed: () async {
                   await favVM.removeFavorite(recipe);
@@ -84,6 +97,8 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                   );
                 },
               ),
+              ],
+            ),
               onTap: () {
                 detailVM.setRecipe(recipe);
                 Navigator.pushNamed(
@@ -98,4 +113,40 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
       ),
     );
   }
+  void _showAddNoteDialog(BuildContext context, Recipe recipe) {
+    final favVM = Provider.of<FavoritesViewModel>(context, listen: false);
+
+    // Pre-fill with existing note if any
+    final existingNote = favVM.getNoteForRecipe(recipe);
+    final noteController = TextEditingController(text: existingNote);
+
+    showDialog(
+      context: context,
+      builder: (_) {
+        return AlertDialog(
+          title: const Text('Add a Personal Note'),
+          content: TextField(
+            controller: noteController,
+            decoration: const InputDecoration(hintText: 'Enter your note here'),
+            maxLines: 3,
+          ),
+          actions: [
+            TextButton(
+              child: const Text('CANCEL'),
+              onPressed: () => Navigator.pop(context),
+            ),
+            TextButton(
+              child: const Text('SAVE'),
+              onPressed: () {
+                final newNote = noteController.text.trim();
+                favVM.setNoteForRecipe(recipe, newNote);
+                Navigator.pop(context);
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
 }
