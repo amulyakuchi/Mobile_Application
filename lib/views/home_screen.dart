@@ -2,10 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../viewmodels/settings_viewmodel.dart';
 
-/// Displays the home screen of the app with options to find recipes or view favorites.
-///
-/// Includes a welcome banner, settings shortcut, and prevents back navigation
-/// to the previous screen.
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -16,7 +12,6 @@ class HomeScreen extends StatelessWidget {
 
     return WillPopScope(
       onWillPop: () async {
-        // Prevent back navigation
         return false;
       },
       child: Scaffold(
@@ -51,7 +46,7 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               centerTitle: true,
-              automaticallyImplyLeading: false, // Remove back button
+              automaticallyImplyLeading: false,
               actions: [
                 IconButton(
                   icon: Icon(
@@ -67,7 +62,6 @@ class HomeScreen extends StatelessWidget {
         ),
         body: Stack(
           children: [
-            // Background image
             Positioned.fill(
               child: Opacity(
                 opacity: 0.2,
@@ -77,14 +71,13 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            // Main content
+
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  // Welcome Box
                   Container(
                     padding: const EdgeInsets.symmetric(vertical: 16.0),
                     decoration: BoxDecoration(
@@ -126,7 +119,6 @@ class HomeScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 40),
 
-                  // Find Recipes Button
                   ElevatedButton.icon(
                     onPressed: () =>
                         Navigator.pushNamed(context, '/ingredient_input'),
@@ -156,7 +148,6 @@ class HomeScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 20),
 
-                  // View Favorites Button
                   ElevatedButton.icon(
                     onPressed: () => Navigator.pushNamed(context, '/favorites'),
                     icon: Icon(
