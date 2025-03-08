@@ -13,7 +13,7 @@ class IngredientInputScreen extends StatefulWidget {
 
 class _IngredientInputScreenState extends State<IngredientInputScreen> {
   final TextEditingController _ingredientController = TextEditingController();
-  final List<String> _ingredients = []; // List to hold entered ingredients
+  final List<String> _ingredients = [];
   final SpoonacularApiService _apiService = SpoonacularApiService();
 
   
