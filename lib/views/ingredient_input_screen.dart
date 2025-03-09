@@ -3,7 +3,6 @@ import 'package:provider/provider.dart';
 import '../viewmodels/search_viewmodel.dart';
 import '../services/spoonacular_api_service.dart';
 
-
 class IngredientInputScreen extends StatefulWidget {
   const IngredientInputScreen({Key? key}) : super(key: key);
 
@@ -13,17 +12,15 @@ class IngredientInputScreen extends StatefulWidget {
 
 class _IngredientInputScreenState extends State<IngredientInputScreen> {
   final TextEditingController _ingredientController = TextEditingController();
-  final List<String> _ingredients = []; // List to hold entered ingredients
+  final List<String> _ingredients = [];
   final SpoonacularApiService _apiService = SpoonacularApiService();
 
-  
   String selectedDietaryPreference = 'Any';
   String selectedCuisine = 'Any';
   String selectedDishType = 'Any';
   double maxCookingTime = 60;
   int numberOfResults = 10;
 
-  
   final List<String> dietaryOptions = [
     'Any',
     'Vegan',
@@ -33,7 +30,6 @@ class _IngredientInputScreenState extends State<IngredientInputScreen> {
     'Paleo',
     'Pescatarian',
   ];
-
   final List<String> cuisineOptions = [
     'Any',
     'American',
@@ -43,7 +39,6 @@ class _IngredientInputScreenState extends State<IngredientInputScreen> {
     'Italian',
     'Mexican',
   ];
-
   final List<String> dishTypeOptions = [
     'Any',
     'Main Course',
@@ -54,16 +49,13 @@ class _IngredientInputScreenState extends State<IngredientInputScreen> {
     'Snack',
   ];
 
-  
   Future<void> _addIngredient() async {
     final ingredient = _ingredientController.text.trim();
     if (ingredient.isEmpty) return;
 
-    
     final isValid = await _apiService.validateIngredient(ingredient);
 
     if (isValid) {
-      
       if (!_ingredients.contains(ingredient)) {
         setState(() {
           _ingredients.add(ingredient);
@@ -167,8 +159,6 @@ class _IngredientInputScreenState extends State<IngredientInputScreen> {
             const SizedBox(height: 16),
             _buildIngredientChips(),
             const SizedBox(height: 16),
-
-            
             _buildDropdownFilter(
               label: 'Dietary Preference',
               options: dietaryOptions,
@@ -196,8 +186,6 @@ class _IngredientInputScreenState extends State<IngredientInputScreen> {
               }),
             ),
             const SizedBox(height: 12),
-
-            
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -216,7 +204,6 @@ class _IngredientInputScreenState extends State<IngredientInputScreen> {
               },
             ),
             const SizedBox(height: 12),
-
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -235,7 +222,6 @@ class _IngredientInputScreenState extends State<IngredientInputScreen> {
               },
             ),
             const SizedBox(height: 12),
-
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: isDarkMode ? Colors.teal.shade800 : Colors.green.shade700,
