@@ -5,12 +5,14 @@ import '../services/spoonacular_api_service.dart';
 class RecipeDetailViewModel extends ChangeNotifier {
   Recipe? selectedRecipe;
   bool isLoading = false;
-  List<String> recipeIngredients = [];
-  List<String> recipeInstructions = [];
+  String errorMessage = '';
   final SpoonacularApiService _apiService = SpoonacularApiService();
 
-  void setRecipe(Recipe recipe) {
+  Future<void> setRecipe(Recipe recipe) async {
     selectedRecipe = recipe;
+    errorMessage = '';
+    notifyListeners();
+    await fetchDetails();
   }
 
   Future<void> fetchDetails() async {
@@ -20,12 +22,10 @@ class RecipeDetailViewModel extends ChangeNotifier {
     notifyListeners();
 
     try {
-      final details = await _apiService.fetchRecipeDetails(selectedRecipe!.id);
-
-      recipeIngredients = details['ingredients'] as List<String>;
-      recipeInstructions = details['instructions'] as List<String>;
+      final fetchedRecipe = await _apiService.fetchRecipeDetails(selectedRecipe!.id);
+      selectedRecipe = fetchedRecipe;
     } catch (e) {
-      debugPrint('Error fetching recipe details: $e');
+      errorMessage = 'Failed to load recipe details';
     } finally {
       isLoading = false;
       notifyListeners();
