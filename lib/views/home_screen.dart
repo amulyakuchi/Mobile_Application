@@ -71,6 +71,7 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
+
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Column(
@@ -117,6 +118,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 40),
+
                   ElevatedButton.icon(
                     onPressed: () =>
                         Navigator.pushNamed(context, '/ingredient_input'),
@@ -145,6 +147,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 20),
+
                   ElevatedButton.icon(
                     onPressed: () => Navigator.pushNamed(context, '/favorites'),
                     icon: Icon(
