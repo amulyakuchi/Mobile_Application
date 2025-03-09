@@ -23,7 +23,7 @@ void main() {
       expect(isValid, false, reason: 'Invalid ingredient should return false');
     });
 
-    test('Empty ingredient should be rejected', () async {
+    test('Empty ingredient shall be rejected', () async {
       final emptyIngredient = '';
       final isValid = await apiService.validateIngredient(emptyIngredient);
 
