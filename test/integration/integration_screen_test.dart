@@ -7,12 +7,11 @@ void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
   testWidgets('Basic Navigation Test', (WidgetTester tester) async {
+
     await tester.pumpWidget(const NomNomApp());
 
-    
     expect(find.text('Welcome to NomNom'), findsOneWidget);
 
-    
     final findRecipesButton = find.text('Find Recipes');
     expect(findRecipesButton, findsOneWidget);
     await tester.tap(findRecipesButton);
