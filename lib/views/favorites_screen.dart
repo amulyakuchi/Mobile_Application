@@ -16,7 +16,6 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
   @override
   void initState() {
     super.initState();
-
     final favVM = Provider.of<FavoritesViewModel>(context, listen: false);
     favVM.fetchFavorites();
   }
@@ -56,7 +55,8 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
         itemCount: favVM.favorites.length,
         itemBuilder: (context, index) {
           final Recipe recipe = favVM.favorites[index];
-          final personalNote= favVM.getNoteForRecipe(recipe);
+          final personalNote = favVM.getNoteForRecipe(recipe);
+
           return Card(
             color: isDarkMode ? Colors.grey.shade800 : Colors.white,
             margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
@@ -65,8 +65,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                 recipe.imageUrl,
                 width: 50,
                 fit: BoxFit.cover,
-                errorBuilder: (_, __, ___) =>
-                const Icon(Icons.image, size: 50),
+                errorBuilder: (_, __, ___) => const Icon(Icons.image, size: 50),
               ),
               title: Text(
                 recipe.title,
@@ -78,30 +77,31 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
               subtitle: personalNote.isNotEmpty
                   ? Text(
                 'Note: $personalNote',
-                style:TextStyle(
-                  fontSize:14*settingsVM.fontScale,
+                style: TextStyle(
+                  fontSize: 14 * settingsVM.fontScale,
                   fontStyle: FontStyle.italic,
                 ),
               )
-                  :null,
+                  : null,
               trailing: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  IconButton(icon:const Icon(Icons.edit_note),
-                  tooltip:'Add/Edit Note',
-                  onPressed: () => _showAddNoteDialog(context, recipe),
-                ),
-                IconButton(
-                  icon: const Icon(Icons.delete, color: Colors.red),
-                  onPressed: () async {
-                    await favVM.removeFavorite(recipe);
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('Removed from favorites')),
-                    );
-                  },
-                ),
-              ],
-            ),
+                  IconButton(
+                    icon: const Icon(Icons.edit_note),
+                    tooltip: 'Add/Edit Note',
+                    onPressed: () => _showAddNoteDialog(context, recipe),
+                  ),
+                  IconButton(
+                    icon: const Icon(Icons.delete, color: Colors.red),
+                    onPressed: () async {
+                      await favVM.removeFavorite(recipe);
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(content: Text('Removed from favorites')),
+                      );
+                    },
+                  ),
+                ],
+              ),
               onTap: () {
                 detailVM.setRecipe(recipe);
                 Navigator.pushNamed(
