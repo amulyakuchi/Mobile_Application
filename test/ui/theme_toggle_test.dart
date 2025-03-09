@@ -21,8 +21,6 @@ void main() {
           ),
         ),
       );
-
-      
       expect(find.text('Dark Theme'), findsOneWidget, reason: 'Dark Theme toggle should be visible.');
       final switchFinder = find.byType(Switch);
       expect(switchFinder, findsOneWidget, reason: 'Switch widget should be present.');
@@ -31,23 +29,16 @@ void main() {
         false,
         reason: 'Switch should be OFF by default (Light theme).',
       );
-
-      
       await tester.tap(switchFinder);
       await tester.pumpAndSettle();
-
-      
       expect(
         tester.widget<Switch>(switchFinder).value,
         true,
         reason: 'Switch should be ON after toggling (Dark theme).',
       );
-
-    
       await tester.tap(switchFinder);
       await tester.pumpAndSettle();
 
-      
       expect(
         tester.widget<Switch>(switchFinder).value,
         false,
@@ -56,4 +47,3 @@ void main() {
     });
   });
 }
-
